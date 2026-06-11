@@ -1,1 +1,0 @@
-# Solevive GitHub Pages Ready
