@@ -1813,5 +1813,32 @@
       });
     });
   </script>
+  <div id="chatBox">
+  <div id="chatMessages"></div>
+  <input id="chatInput" placeholder="Tanya apa saja..." />
+  <button onclick="sendChat()">Kirim</button>
+</div>
+
+<script>
+async function sendChat() {
+  const input = document.getElementById("chatInput");
+  const messages = document.getElementById("chatMessages");
+
+  const userMessage = input.value;
+  if (!userMessage) return;
+
+  messages.innerHTML += `<p><b>Kamu:</b> ${userMessage}</p>`;
+  input.value = "";
+
+  const res = await fetch("/api/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: userMessage })
+  });
+
+  const data = await res.json();
+  messages.innerHTML += `<p><b>AI:</b> ${data.reply}</p>`;
+}
+</script>
 </body>
 </html>
