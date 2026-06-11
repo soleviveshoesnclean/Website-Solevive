@@ -1,1 +1,1 @@
-# Website-Solevive
+# Solevive GitHub Pages Ready
