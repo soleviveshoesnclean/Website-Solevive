@@ -1,0 +1,22 @@
+{
+  "name": "solevive-shoes-clean-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static landing page for Solevive Shoes & Clean, ready for GitHub and Vercel deployment.",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "solevive",
+    "landing-page",
+    "static-site",
+    "vercel"
+  ],
+  "author": "Solevive Shoes & Clean",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "vercel": "latest"
+  }
+}
